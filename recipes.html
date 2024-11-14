@@ -10,15 +10,79 @@
  <body>
     <header>
         <h1>Recipe Explorer</h1>
+        <div class="login-button">
+            <button class="loginButton" onclick="login()">Sign in</button>
+            <button class="registerButton" onclick="register()">Register</button>
+        </div>
     </header>
 
-    <nav class="navbar">
-        <div class="filter">
-            <div class="layer1"></div>
-            <div class="layer2"></div>
-            <div class="layer3"></div>
-        </div>
+    <!--We will now create a form box for the login screen-->
+    <div class="account-form">
+            <!--Let's start with a registration form------->
+            <div class="register-form" id="register">
+                <h2>Create your account</h2>
+                <div class="full-name">
+                    <div class="input-box">
+                        <span class>Your username</span>
+                        <input type="text" class="input-field" placeholder="Username">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span>Your email</span>
+                    <input type="text" class="input-field" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <span>Password</span>
+                    <input type="text" class="input-field" placeholder="Password">
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register">
+                </div>
+                    <div class="check-button">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check">I agree to the <a href="#">terms & conditions</a></label>
+                </div>
+                <div class="bottom">
+                    <span>Already have an account? <a href="#" onclick="login()">Sign in</a></span>
+                </div>
+            </div>
+             <!--Continue with a login form----------------->
+             <div class="login-form" id="login">
+                <h2>Sign in</h2>
+                <div class="input-box">
+                    <span>Your username or email</span>
+                    <input type="text" class="input-field" placeholder="Username or email">
+                </div>
+                <div class="input-box">
+                    <span>Password</span>
+                    <input type="text" class="input-field" placeholder="Password">
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In">
+                </div>
+                <div class="separator">
+                    <div class="check-button">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Remember Me</label>
+                    </div>
+                    <div class="reset-password">
+                        <label><a href="#">Forgot password?</a></label>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <span>Don't have an account? <a href="#" onclick="register()">Create a new account</a></span>
+                </div>
+            </div>
+            <!--Time to close down the login screen--------->
+            <span class="close-screen">&times;</span>
+    </div>
 
-    </nav>
+    <script>
+        var buttonOne = document.getElementById("loginButton");
+        var buttonTwo = document.getElementById("registerButton");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+    </script>
+
  </body>
 </html>
