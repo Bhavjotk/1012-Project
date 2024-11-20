@@ -1,0 +1,239 @@
+<!-- Hello, this will be the Recipe Page for the Recipe Explorer Website -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="recipe-page.css">
+    <script src="recipe-page.js" defer="true"></script>
+    <title>Recipe Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Recipe Explorer</h1>
+        <div class="login-button">
+            <button class="loginButton" onclick="login()">Sign in</button>
+            <button class="registerButton" onclick="register()">Register</button>
+        </div>
+    </header>
+
+    <!--We will now create a form box for the login screen-->
+    <div class="account-form">
+            <!--Let's start with a registration form------->
+            <div class="register-form" id="register">
+                <h2>Create your account</h2>
+                <div class="full-name">
+                    <div class="input-box">
+                        <span class>Your username</span>
+                        <input type="text" class="input-field" placeholder="Username">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span>Your email</span>
+                    <input type="text" class="input-field" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <span>Password</span>
+                    <input type="text" class="input-field" placeholder="Password">
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register">
+                </div>
+                    <div class="check-button">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check">I agree to the <a href="#">terms & conditions</a></label>
+                </div>
+                <div class="bottom">
+                    <span>Already have an account? <a href="#" onclick="login()">Sign in</a></span>
+                </div>
+            </div>
+             <!--Continue with a login form----------------->
+             <div class="login-form" id="login">
+                <h2>Sign in</h2>
+                <div class="input-box">
+                    <span>Your username or email</span>
+                    <input type="text" class="input-field" placeholder="Username or email">
+                </div>
+                <div class="input-box">
+                    <span>Password</span>
+                    <input type="text" class="input-field" placeholder="Password">
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In">
+                </div>
+                <div class="separator">
+                    <div class="check-button">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Remember Me</label>
+                    </div>
+                    <div class="reset-password">
+                        <label><a href="#">Forgot password?</a></label>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <span>Don't have an account? <a href="#" onclick="register()">Create a new account</a></span>
+                </div>
+            </div>
+            <!--Time to close down the login screen--------->
+            <span class="close-screen">&times;</span>
+    </div>
+
+    <!-- Home Page -->
+    <div class = "homepage">
+        <!-- Nav Bar -->      
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">New Recipes</a></li>
+                <li><a href="#">Title</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">Cuisine</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">Collections</a></li>
+            </ul>
+            <ul>
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <li><a href="#">New Recipes</a></li>
+                <li><a href="#">Title</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">Cuisine</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">Collections</a></li>                
+            </ul>
+        </nav>
+    </div>
+
+    <!----------------- Time to build a recipe page ------------------------->
+    <div class="recipe-page">
+        <div class="recipe-img">
+            <img src="images/omelette.jpg" alt="omelette">
+        </div>
+
+        <div class="recipe-info">
+            <div class="summary">
+                <h1>Simple Omelette Recipe</h1>
+                <p class="description">An easy and quick dish, perfect for any meal. This 
+                classic omelette combines beaten eggs cooked to perfection, optionally filled
+                with your choice of cheese, vegetables, or meats.</p>
+            </div>
+
+            <div class="setup">
+                <div class="prep-time">
+                    <h2>Preparation Time</h2>
+                    <ul>
+                        <li><span>Total</span>: Approximately 6 minutes</li>
+                        <li><span>Prep Time</span>: Approximately 2 minutes</li>
+                        <li><span>Cook Time</span>: Approximately 4 minutes</li>
+                    </ul>
+                </div>
+                <div class="recipe-prep">
+                    <h2>Ingredients</h2>
+                    <ul class="ingredients">
+                        <li><span>2 eggs</span></li>
+                        <li><span>1 tbsp (15 mL) water</span></li>
+                        <li><span>Pinch salt</span></li>
+                        <li><span>Pinch pepper</span></li>
+                        <li><span>1 tbsp (15 mL) butter or oil</span></li>
+                        <li><span>Filling ingredients: cheese, diced vegetables, or cooked meats</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="recipe-steps">
+                <h2>Instructions</h2>
+                <div class="instructions">
+                    <div class="steps">
+                       <h3>Step 1</h3>
+                       <p>Whisk eggs, water, salt, and pepper</p>
+                    </div>
+                     <div class="steps">
+                        <h3>Step 2</h3>
+                        <p>Melt butter in an 8-inch (20 cm) nonstick frying pan over medium heat. 
+                        Pour in egg mixture. As eggs set around edge of pan, with spatula, gently push cooked portions toward centre of skillet. 
+                        Tilt and rotate skillet to allow uncooked egg to flow into empty spaces.</p>
+                     </div>
+                     <div class="steps">
+                        <h3>Step 3</h3>
+                        <p>When eggs are almost set on surface but still look moist, cover half of omelette with filling. 
+                        Slip spatula under unfilled side; fold over onto filled half.</p>
+                     </div>
+                     <div class="steps">
+                        <h3>Step 4</h3>
+                        <p>Cook for a minute, then slide omelette onto plate.</p>
+                     </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="nutrition-facts">
+                <h2>Nutrition Facts</h2>
+                <div class="nutrition-table">
+                    <div class="item">
+                        <p>Calories</p>
+                        <p class="amount">148</p>
+                    </div>
+                    <div class="item">
+                        <p>Fat</p>
+                        <p class="amount">11 g</p>
+                    </div>
+                    <div class="item">
+                        <p>Saturated Fat</p>
+                        <p class="amount">3 g</p>
+                    </div>
+                    <div class="item">
+                        <p>Trans Fat</p>
+                        <p class="amount">0 g</p>
+                    </div>
+                    <div class="item">
+                        <p>Carbohydrate</p>
+                        <p class="amount">2 g</p>
+                    </div>
+                    <div class="item">
+                        <p>Fibre</p>
+                        <p class="amount">0 g</p>
+                    </div>
+                    <div class="item">
+                        <p>Sugars</p>
+                        <p class="amount">0 g</p>
+                    </div>
+                    <div class="item">
+                        <p>Protein</p>
+                        <p class="amount">12 g</p>
+                    </div>
+                    <div class="item">
+                        <p>Sodium</p>
+                        <p class="amount">207 mg</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var buttonOne = document.getElementById("loginButton");
+        var buttonTwo = document.getElementById("registerButton");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        // show sidebar
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex';
+
+        }
+
+        // hide sidebar
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
