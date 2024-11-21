@@ -311,6 +311,10 @@ img {
     padding: 7% 5% 10% 5%;
 }
 
+.description{
+    width: 70%;
+}
+
 .summary h1{
     color: rgb(215, 134, 28);
     font-size: 50px;
