@@ -309,7 +309,10 @@ img {
 
 .summary{
     padding: 7% 5% 10% 5%;
-    width: 40%;
+}
+
+.description{
+    width: 30%;
 }
 
 .summary h1{
