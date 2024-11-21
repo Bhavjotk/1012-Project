@@ -301,7 +301,7 @@ nav a:hover{
 
 img {
     display: block;
-    object-fit: contain;
+    padding-top: 7%;
     float: right;
     z-index: 1;
 }
