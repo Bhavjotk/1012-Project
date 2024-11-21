@@ -303,7 +303,7 @@ img {
     display: block;
     object-fit: contain;
     float: right;
-    padding: 7% 5% 0 0;
+    padding: 7% 16% 0 0;
     z-index: 1;
 }
 
@@ -312,7 +312,7 @@ img {
 }
 
 .description{
-    width: 30%;
+    width: 50%;
 }
 
 .summary h1{
