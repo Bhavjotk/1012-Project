@@ -67,8 +67,8 @@ header>h1{
 
 .account-form{
     position: fixed;
-    top: 12%;
-    left: 33%;
+    top: 18%;
+    left: 37%;
     transform: translate( -12%, -33%);
     width: 450px;
     height: 452px;
