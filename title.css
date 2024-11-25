@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins'); 
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(253, 5, 5, 0.555);
+    
+}
+
+header>h1{
+    margin-left: 20px;
+    font-size: 35px;
+}
+
+.loginButton{
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.registerButton{
+    width: 130px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.registerButton:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+.loginButton:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+.account-form{
+    position: fixed;
+    top: 12%;
+    left: 33%;
+    transform: translate( -12%, -33%);
+    width: 450px;
+    height: 452px;
+    background-color: lightgray;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 3;
+    transform: scale(0);
+}
+
+.account-form.active{
+    transform: scale(1);
+}
+
+.register-form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -550px;
+    display: flex;
+    flex-direction: column;
+}
+.login-form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form>h2{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-bottom: 0; 
+}
+
+.login-form>h2{
+    font-size: 30px;
+    color: black;
+    text-align: center; 
+}
+
+.input-box{
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.input-box>span{
+    font-size: 15px;
+}
+
+.input-field{
+    font-size: 15px;
+    width: 88%;
+    height: 30px;
+    padding: 0 10px 0 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+}
+
+.submit{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 94.5%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: goldenrod;
+    box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+}
+
+.separator{
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-button{
+    font-size: small;
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+}
+
+.check-button>label>a:link, a:visited{
+    text-decoration: none;
+    color: blue;
+}
+
+.check-button>label>a:hover{
+    text-decoration: underline;
+    color: orange;
+}
+
+.reset-password{
+    font-size: small;
+    margin-top: 15px;
+    display: flex;
+    padding-right: 30px;
+}
+
+.reset-password>label>a:link, a:visited{
+    text-decoration: none;
+    color: blue;
+}
+
+.reset-password>label>a:hover{
+    text-decoration: underline;
+    color: orange;
+}
+
+.bottom{
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: 5px;
+}
+
+.bottom>span>a:link, a:visited{
+    text-decoration: none;
+    color: blue;
+}
+
+.bottom>span>a:hover{
+    text-decoration: underline;
+    color: orange;
+}
+
+.close-screen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.homepage{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 96px;
+}
+
+/* Navigation Bar */
+
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+    display: inline-block;
+    width: 100%;
+    
+}
+
+nav a {
+    height: 100%;
+    padding: 0 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover{
+    background-color: cyan;
+    color: black;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0.144);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+/* Recipes */
+.btn a{
+    text-decoration: none;
+}
+.btn {
+    padding: 0.6rem 1rem;
+    background: green;
+    color: black;
+    font-weight: 400;
+    border-radius:  5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 00.5rem;
+    max-width: 160px;
+}
+
+.btn .bx{
+    padding: 4px;
+    background: red;
+    color: black;
+    border-radius: 1rem;
+    font-size: 20px;
+    margin: auto;
+}
+
+.btn:hover {
+    background: pink;
+    transition: 0.2s ease;
+}
+
+.recipes{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.box {
+    padding: 20px;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%) ;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.box img{
+    
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    
+}
+
+.box span {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.box h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: blueviolet;
+}
+
+.box .bx-heart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 20px;
+    color: palevioletred;
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer{
+    background: #333;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
