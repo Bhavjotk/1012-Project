@@ -364,6 +364,62 @@ color: white;
     width: 40%;
 }
 
+.Cuisine h3 {
+    padding-bottom: 10px;
+}
+
+.Cuisine select {
+    margin-top: 33px;
+    padding-bottom: 20px;
+    width: 40%;
+}
+
+.Calories h3{
+    padding-bottom: 10px;
+}
+
+.Calories textarea{
+    margin-top: 40px;
+    
+   
+}
+
+.description h3 {
+    padding-bottom: 10px;
+}
+
+.description textarea {
+    margin-top: 30px;
+    padding-bottom: 100px;
+}
+
+.ingredients h3 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+.ingredients textarea {
+    margin-top: 30px;
+    padding-bottom: 200px;
+}
+
+.Recipe h3 {
+    padding-bottom: 10px;
+}
+
+.Recipe textarea {
+    margin-top: 30px;
+    padding-bottom: 350px;
+}
+
+.imgs input{
+    margin-top: 20px;
+}
+
+.vid textarea{
+    margin-top: 40px;
+    padding-bottom: 10px;
+}
 
 
 /* Footer */
