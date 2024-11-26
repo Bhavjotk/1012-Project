@@ -323,7 +323,46 @@ color: white;
 }
 
 
+/* Inputs */
 
+.uploadpage{
+    width: 90%;
+    padding: 20px;
+    
+}
+
+.uploadpage h3 {
+    float: left;
+    margin-right: 20px;
+    
+    width: 50%;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.uploadpage textarea {
+    width: 40%;
+    resize: none;
+    margin-top: 20px;
+}
+
+#t {
+    text-align: center;
+}
+
+.name h3{
+    padding-bottom: 10px;
+}
+
+.Course h3{
+    padding-bottom: 10px;
+}
+
+.Course select {
+    margin-top: 33px;
+    padding-bottom: 20px;
+    width: 40%;
+}
 
 
 
