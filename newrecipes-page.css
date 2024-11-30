@@ -332,6 +332,7 @@ nav a:hover{
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
     gap: 1rem;
     margin-top: 2rem;
+
 }
 
 .box {
@@ -339,6 +340,7 @@ nav a:hover{
     box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%) ;
     border-radius: 0.5rem;
     position: relative;
+    overflow: hidden;
 }
 
 .box img{
@@ -352,14 +354,14 @@ nav a:hover{
 
 .box span {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 26px;
 }
 
 .box h2 {
     font-size: 1rem;
     font-weight: 600;
     margin-top: 0.5rem;
-    color: blueviolet;
+    color: rgb(112, 15, 60);
 }
 
 .box .bx-heart {
@@ -370,6 +372,18 @@ nav a:hover{
     color: palevioletred;
 }
 
+
+.rcp-button{
+    text-align: center;
+    text-decoration: none;
+    background-color: lightcoral;
+    padding: 20px 0;
+    width: 130%;
+    border: none;
+    cursor: pointer;
+    margin-left: -40px;
+    margin-bottom: -70px;
+}
     
 
 

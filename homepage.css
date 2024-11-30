@@ -380,6 +380,17 @@ padding: 50px 0;
     cursor: pointer;
 }
 
+.rcp-button{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: lightcoral;
+    padding: 20px 0;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
 /* Footer */
 
 footer{
