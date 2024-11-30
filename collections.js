@@ -1,5 +1,6 @@
 /* JS for Collections Page */
 
+//Login Page
 function login() {
     x.style.left = "10px";
     y.style.right = "-550px";
@@ -15,6 +16,7 @@ const loginBtn = document.querySelector('.loginButton');
 const registerBtn = document.querySelector('.registerButton');
 const closeScreen = document.querySelector('.close-screen');
 
+//Event Listeners
 loginBtn.addEventListener('click', ()=> {
     loginScreen.classList.add('active');
 });
@@ -25,16 +27,139 @@ registerBtn.addEventListener('click', ()=> {
 
 closeScreen.addEventListener('click', ()=> {
     loginScreen.classList.remove('active');
-})
+});
 
 //Collections Page
-const searchForm = document.querySelector('form');
-const searchInput = document.querySelector('#recipe-name');
-const recipeList = document.querySelector('#results');
+const searchRecipeName = document.getElementById('search-name');
+const searchIngredients = document.getElementById('search-ingredients');
+const searchCategory = document.getElementById('search-categories');
+const recipeList = document.getElementById('results');
+const recipeContent = document.querySelector('.recipe-content');
+const recipeCloseScreen = document.querySelector('.recipe-close');
 
-searchForm.addEventListener("keyup", (event) => {
-    event.preventDefault();
-})
-  
-async function searchRecipes() {
+//Event Listeners
+searchRecipeName.addEventListener('click', getRecipeName);
+searchIngredients.addEventListener('click', getRecipeIngredient);
+searchCategory.addEventListener('click', getRecipeCategory);
+recipeList.addEventListener('click', getRecipe);
+recipeCloseScreen.addEventListener('click', ()=> {
+    recipeContent.parentElement.classList.remove('showRecipe');
+});
+
+//Get the name of the recipe
+function getRecipeName() {
+    let searchInputName = document.getElementById('recipe-name').value.trim();
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputName}`).then(response => response.json())
+    .then(data => {
+        let html = "";
+        if (data.meals){
+            data.meals.forEach(meal => {
+                html += `<div class="meal-item" data-id = "${meal.idMeal}">
+                            <div class="meal-img">
+                                <img src= "${meal.strMealThumb}" alt = "meal">
+                            </div>
+                            <div class="meal-name">
+                                <h3>${meal.strMeal}</h3>
+                                <a href="#" class="recipe-btn">Recipe Info</a>
+                            </div>
+                        </div>`
+            });
+            recipeList.classList.remove('notFound');
+        }
+        else {
+            html = "Sorry, no recipe found...";
+            recipeList.classList.add('notFound');
+        }
+        
+        recipeList.innerHTML = html;
+    })
+}
+
+//Get a list of recipes that matches with the integredients
+function getRecipeIngredient() {
+    let searchInputIngredient = document.getElementById('recipe-ingredients').value.trim();
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputIngredient}`).then(response => response.json())
+    .then(data => {
+        let html = "";
+        if (data.meals){
+            data.meals.forEach(meal => {
+                html += `<div class="meal-item" data-id = "${meal.idMeal}">
+                            <div class="meal-img">
+                                <img src= "${meal.strMealThumb}" alt = "meal">
+                            </div>
+                            <div class="meal-name">
+                                <h3>${meal.strMeal}</h3>
+                                <a href="#" class="recipe-btn">Recipe Info</a>
+                            </div>
+                        </div>`
+            });
+            recipeList.classList.remove('notFound');
+        }
+        else {
+            html = "Sorry, no recipe found...";
+            recipeList.classList.add('notFound');
+        }
+        
+        recipeList.innerHTML = html;
+    })
+}
+
+//Get a list of recipes that matches with the category
+function getRecipeCategory() {
+    let searchInputCategory = document.getElementById('recipe-categories').value.trim();
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchInputCategory}`).then(response => response.json())
+    .then(data => {
+        let html = "";
+        if (data.meals){
+            data.meals.forEach(meal => {
+                html += `<div class="meal-item" data-id = "${meal.idMeal}">
+                            <div class="meal-img">
+                                <img src= "${meal.strMealThumb}" alt = "meal">
+                            </div>
+                            <div class="meal-name">
+                                <h3>${meal.strMeal}</h3>
+                                <a href="#" class="recipe-btn">Recipe Info</a>
+                            </div>
+                        </div>`
+            });
+            recipeList.classList.remove('notFound');
+        }
+        else {
+            html = "Sorry, no recipe found...";
+            recipeList.classList.add('notFound');
+        }
+        
+        recipeList.innerHTML = html;
+    })
+}
+
+// Get the contents of the recipe
+function getRecipe(e) {
+    e.preventDefault();
+    if (e.target.classList.contains('recipe-btn')) {
+        let recipe = e.target.parentElement.parentElement;
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipe.dataset.id}`).then(response => response.json())
+        .then(data => recipeModal(data.meals));
+    }
+}
+
+// Make a recipe modal
+function recipeModal(meal) {
+    console.log(meal);
+    meal = meal[0];
+    let html = `<h2 class="recipe-title">${meal.strMeal}</h2>
+                <p class="recipe-category">${meal.strCategory}</p>
+                <div class="recipe-instruct">
+                    <h3>Instructions:</h3>
+                    <p>${meal.strInstructions}</p>
+                </div>
+                <div class="recipe-img">
+                    <img src= "${meal.strMealThumb}" alt="">
+                </div>
+                <div class="recipe-link">
+                    <a href="${meal.strYoutube}" target="_blank">Watch Video</a>
+                </div>`;
+
+    recipeContent.innerHTML = html;
+    recipeContent.parentElement.classList.add('showRecipe');
 }
