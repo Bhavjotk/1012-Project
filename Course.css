@@ -236,8 +236,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    font-size: 12px;
+    
 }
 
 nav ul{
@@ -247,8 +246,8 @@ nav ul{
     white-space: nowrap;
     list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav li{
@@ -273,8 +272,6 @@ nav a:hover{
     background-color: cyan;
     color: black;
 }
-
-
 
 .sidebar {
     position: fixed;

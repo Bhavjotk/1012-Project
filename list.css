@@ -236,7 +236,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    
 }
 
 nav ul{
@@ -272,8 +272,6 @@ nav a:hover{
     background-color: cyan;
     color: black;
 }
-
-
 
 .sidebar {
     position: fixed;

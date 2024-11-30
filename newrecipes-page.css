@@ -236,7 +236,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
     
 }
 
@@ -267,15 +266,12 @@ nav a {
     display: flex;
     align-items: center;
     color: rgb(0, 0, 0);
-   
 }
 
 nav a:hover{
     background-color: cyan;
     color: black;
 }
-
-
 
 .sidebar {
     position: fixed;
