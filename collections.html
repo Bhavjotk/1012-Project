@@ -22,7 +22,7 @@
     <div class="account-form">
             <!--Let's start with a registration form------->
             <div class="register-form" id="register">
-                <h2>Create your account</h2>
+                <h2 class>Create your account</h2>
                 <div class="full-name">
                     <div class="input-box">
                         <span class>Your username</span>
@@ -42,10 +42,10 @@
                 </div>
                     <div class="check-button">
                     <input type="checkbox" id="register-check">
-                    <label for="register-check">I agree to the <a href="#">terms & conditions</a></label>
+                    <label for="register-check">I agree to the <a href="#" class="login-color">terms & conditions</a></label>
                 </div>
                 <div class="bottom">
-                    <span>Already have an account? <a href="#" onclick="login()">Sign in</a></span>
+                    <span>Already have an account? <a href="#" class="login-color" onclick="login()">Sign in</a></span>
                 </div>
             </div>
              <!--Continue with a login form----------------->
@@ -68,11 +68,11 @@
                         <label for="login-check">Remember Me</label>
                     </div>
                     <div class="reset-password">
-                        <label><a href="#">Forgot password?</a></label>
+                        <label><a href="#" class="login-color">Forgot password?</a></label>
                     </div>
                 </div>
                 <div class="bottom">
-                    <span>Don't have an account? <a href="#" onclick="register()">Create a new account</a></span>
+                    <span>Don't have an account? <a href="#" class="login-color" onclick="register()">Create a new account</a></span>
                 </div>
             </div>
             <!--Time to close down the login screen--------->
@@ -113,38 +113,30 @@
             <form>
                 <label for="recipe-name">Name:</label>
                 <input type="search" id="recipe-name" class="name-search" placeholder="Enter the name of the recipe...">
-                <button type="submit" class="search_btn">Add</button>
+                <button type="submit" class="search_btn" id="search-name">Search</button>
                 <br />
 
-                <label for="recipe-ingredients">Ingredients:</label>
+                <label for="recipe-ingredients">Ingredient:</label>
                 <input type="search" id="recipe-ingredients" class="ingredient-search" placeholder="Enter an ingredient...">
-                <button type="submit" class="search_btn">Add</button>
+                <button type="submit" class="search_btn" id="search-ingredients">Search</button>
                 <br />
 
-                <label for="recipe-calories">Calories:</label>
-                <input type="search" id="recipe-calories" class="calories-search" placeholder="Enter an amount of calories...">
-                <button type="submit" class="search_btn">Add</button>
-                <br />
-
-                <div class="check-button">
-                <input type="checkbox" id="dairy" class="allergy">
-                <label for="dairy">No Dairy</label>
-                </div>
-
-                <div class="check-button">
-                <input type="checkbox" id="peanuts" class="allergy">
-                <label for="peanut">No Peanuts</label>
-                </div>
-
-                <div class="check-button">
-                <input type="checkbox" id="fish" class="allergy">
-                <label for="fish">No Fish</label>
-                </div>
+                <label for="recipe-categories">Category:</label>
+                <input type="search" id="recipe-categories" class="category-search" placeholder="Choose a category...">
+                <button type="submit" class="search_btn" id="search-categories">Search</button>
             </form>
         </div>
         <div class="right-column">
             <h3>Your Search Results:</h3>
             <div id="results"></div>
+
+            <div class="meal-details">
+                <!-- Recipe Close Button -->
+                <span class="recipe-close">&times;</span>
+
+                 <!-- Recipe Content -->
+                  <div class="recipe-content"></div>
+            </div>
         </div>
     </div>
 
