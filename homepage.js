@@ -1,4 +1,4 @@
-/* Final Project */
+/* Home Page */
 
 function login() {
     x.style.left = "10px";
@@ -25,20 +25,7 @@ registerBtn.addEventListener('click', ()=> {
 
 closeScreen.addEventListener('click', ()=> {
     loginScreen.classList.remove('active');
-})
-
-// Nav Bar
-// const navItems = document.querySelectorAll('.topnav');
-// navItems.forEach(item => {
-//     item.addEventListener('mouseover', function(e) {
-//     //   e.target.style.backgroundColor = '#ff0000';
-//     });
-  
-//     item.addEventListener('click', function(e) {
-//     //   e.target.style.color = '#00ff00';
-//     });
-//   });
-
+});
 
 
   
