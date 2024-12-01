@@ -1,3 +1,4 @@
+/* Course Page */
 
 function login() {
     x.style.left = "10px";
