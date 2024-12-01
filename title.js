@@ -1,4 +1,4 @@
-/* Title Page */
+/* Final Project */
 
 function login() {
     x.style.left = "10px";
@@ -30,6 +30,14 @@ closeScreen.addEventListener('click', ()=> {
 // Title Page
 var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const recipeList = document.getElementById('results');
+const recipeContent = document.querySelector('.recipe-content');
+const recipeCloseScreen = document.querySelector('.recipe-close');
+
+// Event Listeners
+recipeList.addEventListener('click', getRecipe);
+recipeCloseScreen.addEventListener('click', ()=> {
+    recipeContent.parentElement.classList.remove('showRecipe');
+});
 
 for (let i = 0; i < alphabet.length; i++) {
     var letterSearch = document.getElementById(alphabet[i]);
@@ -68,3 +76,33 @@ for (let i = 0; i < alphabet.length; i++) {
     }
 }
 
+// Get the contents of the recipe
+function getRecipe(e) {
+    e.preventDefault();
+    if (e.target.classList.contains('recipe-btn')) {
+        let recipe = e.target.parentElement.parentElement;
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipe.dataset.id}`).then(response => response.json())
+        .then(data => recipeModal(data.meals));
+    }
+}
+
+// Make a recipe modal
+function recipeModal(meal) {
+    console.log(meal);
+    meal = meal[0];
+    let html = `<h2 class="recipe-title">${meal.strMeal}</h2>
+                <p class="recipe-category">${meal.strCategory}</p>
+                <div class="recipe-instruct">
+                    <h3>Instructions:</h3>
+                    <p>${meal.strInstructions}</p>
+                </div>
+                <div class="recipe-img">
+                    <img src= "${meal.strMealThumb}" alt="">
+                </div>
+                <div class="recipe-link">
+                    <a href="${meal.strYoutube}" target="_blank">Watch Video</a>
+                </div>`;
+
+    recipeContent.innerHTML = html;
+    recipeContent.parentElement.classList.add('showRecipe');
+}
