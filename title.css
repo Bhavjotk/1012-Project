@@ -207,7 +207,7 @@ header>h1{
     color: orange;
 }
 
-.close-screen{
+.close-screen, .recipe-close{
     position: absolute;
     top: 0;
     right: 0;
