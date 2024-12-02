@@ -1,4 +1,4 @@
-/* Cusisine Page Login Page */
+/* Cuisine Page Login Page */
 
 function login() {
     x.style.left = "10px";
