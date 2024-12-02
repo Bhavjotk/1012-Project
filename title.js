@@ -1,4 +1,4 @@
-/* Final Project */
+/* Title Page Login Page */
 
 function login() {
     x.style.left = "10px";
@@ -88,7 +88,6 @@ function getRecipe(e) {
 
 // Make a recipe modal
 function recipeModal(meal) {
-    console.log(meal);
     meal = meal[0];
     let html = `<h2 class="recipe-title">${meal.strMeal}</h2>
                 <p class="recipe-category">${meal.strCategory}</p>
