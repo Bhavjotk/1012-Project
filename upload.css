@@ -161,12 +161,12 @@ header>h1{
     gap: 5px;
 }
 
-.check-button>label>a:link, a:visited{
+.login-color:link, .login-color:visited{
     text-decoration: none;
     color: blue;
 }
 
-.check-button>label>a:hover{
+.login-color:hover{
     text-decoration: underline;
     color: orange;
 }
@@ -178,7 +178,7 @@ header>h1{
     padding-right: 30px;
 }
 
-.reset-password>label>a:link, a:visited{
+.reset-password>label>a:link, .reset-password>label>a:visited{
     text-decoration: none;
     color: blue;
 }
@@ -197,7 +197,7 @@ header>h1{
     padding-bottom: 5px;
 }
 
-.bottom>span>a:link, a:visited{
+.bottom>span>a:link, .bottom>span>a:visited{
     text-decoration: none;
     color: blue;
 }
@@ -265,7 +265,7 @@ nav a {
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: darkblue;
 }
 
 nav a:hover{
@@ -348,6 +348,8 @@ color: white;
 
 #t {
     text-align: center;
+    margin-top: 5%;
+    font-size: 32px;
 }
 
 .name h3{
@@ -423,6 +425,7 @@ color: white;
 
 .uploadfinal {
     text-align: center;
+    margin: 2em;
 }
 
 .uploadbtn {
@@ -430,7 +433,6 @@ color: white;
     width: 20%;
     font-size: 16px;
 }
-
 
 /* Footer */
 
