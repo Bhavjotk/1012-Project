@@ -1,4 +1,4 @@
-<!-- Hello, this will be the Home Page for the Recipe Explorer Website -->
+<!-- Hello, this will be the Upload Page for the Recipe Explorer Website -->
 
 <!DOCTYPE html>
 <html>
@@ -31,7 +31,7 @@
                     <li><a href="homepage.html">Home</a></li>
                     <li><a href="newrecipes-page.html">New Recipes</a></li>
                     <li><a href="title.html">Title</a></li>
-                    <li><a href="Course.html">Course</a></li>
+                    <li><a href="course.html">Course</a></li>
                     <li><a href="cuisine.html">Cuisine</a></li>
                     <li><a href="list.html">List</a></li>
                     <li><a href="upload.html">Upload</a></li>
@@ -47,7 +47,7 @@
                             <li><a href="homepage.html">Home</a></li>
                             <li><a href="newrecipes-page.html">New Recipes</a></li>
                             <li><a href="title.html">Title</a></li>
-                            <li><a href="Course.html">Course</a></li>
+                            <li><a href="course.html">Course</a></li>
                             <li><a href="cuisine.html">Cuisine</a></li>
                             <li><a href="list.html">List</a></li>
                             <li><a href="upload.html">Upload</a></li>
@@ -55,83 +55,6 @@
                     
                 </ul>
             </nav>
-
-            <section class="uploadpage">
-                <h2 id="t">Upload a New Recipe</h2>
-                <div class="name">
-                    <h3>Recipe Name:</h3>
-                    <textarea name="input" id="input" class="input"></textarea>
-                </div>
-                <div class="Course">
-                    <h3>Course:</h3>
-                    <select name="input" class="input" id="input">
-                        <option value="Appetizer">Appetizer</option>
-                        <option value="Entree">Entree</option>
-                        <option value="Main">Main Course</option>
-                        <option value="Soup">Soup</option>
-                        <option value="Dessert">Dessert</option>
-                    </select>
-                </div>
-                <div class="Cuisine">
-                    <h3>Cuisine:</h3>
-                    <select name="input" class="input" id="input">
-                        <option value="Chinese">Chinese</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="Indian">Indian</option>
-                        <option value="Italian">Italian</option>
-                        <option value="French">French</option>
-                        <option value="Lebanese">Lebanese</option>
-                        <option value="Turkish">Turkish</option>
-                        <option value="Mexican">Mexican</option>
-                        <option value="Moroccan">Moroccan</option>
-                        <option value="German">German</option>
-                        <option value="Korean">Korean</option>
-                    </select>
-                </div>
-                <div class="Calories">
-                    <h3>Calories:</h3>
-                    <textarea name="input" id="input" class="input"></textarea>
-                </div>
-                <div class="description">
-                    <h3>Recipe Description:</h3>
-                    <textarea name="input" id="input" class="input"></textarea>
-                </div>
-                <div class="ingredients">
-                    <h3>Ingredients:</h3>
-                    <textarea name="input" id="input" class="input"></textarea>
-                </div>
-                <div class="Recipe">
-                    <h3>Recipe Instructions:</h3>
-                    <textarea name="input" id="input" class="input"></textarea>
-                </div>
-                <div class="imgs">
-                    <h3>Images:</h3>
-                    <div class="my">
-                        <input type="file" class="myFile" name="filename">
-                        <input type="submit" class="myFile">
-                    </div>
-                </div>
-                <div class="vid">
-                    <h3>Video Links:</h3>
-                    <textarea name="input" id="input" class="input"></textarea>
-                </div>
-                <div class="uploadfinal">
-                    <button class="uploadbtn">Upload My Recipe</button>
-                </div>
-
-
-            </section>
-
-
-
-            <footer>
-                <div>
-                    <p>&copy; 2024 Receipe Explorer</p>
-                </div>
-            </footer>
-
-
-
         </div>
     </header>
 
@@ -159,10 +82,10 @@
             </div>
             <div class="check-button">
                 <input type="checkbox" id="register-check">
-                <label for="register-check">I agree to the <a href="#">terms & conditions</a></label>
+                <label for="register-check">I agree to the <a href="#" class="login-color">terms & conditions</a></label>
             </div>
             <div class="bottom">
-                <span>Already have an account? <a href="#" onclick="login()">Sign in</a></span>
+                <span>Already have an account? <a href="#" class="login-color" onclick="login()">Sign in</a></span>
             </div>
         </div>
         <!--Continue with a login form----------------->
@@ -189,12 +112,82 @@
                 </div>
             </div>
             <div class="bottom">
-                <span>Don't have an account? <a href="#" onclick="register()">Create a new account</a></span>
+                <span>Don't have an account? <a href="#" class="login-color" onclick="register()">Create a new account</a></span>
             </div>
         </div>
         <!--Time to close down the login screen--------->
         <span class="close-screen">&times;</span>
     </div>
+
+    <div class="uploadpage">
+        <h2 id="t">Upload a New Recipe</h2>
+        <div class="name">
+            <h3>Recipe Name:</h3>
+            <textarea name="input" id="input" class="input"></textarea>
+        </div>
+        <div class="Course">
+            <h3>Course:</h3>
+            <select name="input" class="input" id="input">
+                <option value="Appetizer">Appetizer</option>
+                <option value="Entree">Entree</option>
+                <option value="Main">Main Course</option>
+                <option value="Soup">Soup</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+        </div>
+        <div class="Cuisine">
+            <h3>Cuisine:</h3>
+            <select name="input" class="input" id="input">
+                <option value="Chinese">Chinese</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="French">French</option>
+                <option value="Lebanese">Lebanese</option>
+                <option value="Turkish">Turkish</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Moroccan">Moroccan</option>
+                <option value="German">German</option>
+                <option value="Korean">Korean</option>
+            </select>
+        </div>
+        <div class="Calories">
+            <h3>Calories:</h3>
+            <textarea name="input" id="input" class="input"></textarea>
+        </div>
+        <div class="description">
+            <h3>Recipe Description:</h3>
+            <textarea name="input" id="input" class="input"></textarea>
+        </div>
+        <div class="ingredients">
+            <h3>Ingredients:</h3>
+            <textarea name="input" id="input" class="input"></textarea>
+        </div>
+        <div class="Recipe">
+            <h3>Recipe Instructions:</h3>
+            <textarea name="input" id="input" class="input"></textarea>
+        </div>
+        <div class="imgs">
+            <h3>Images:</h3>
+            <div class="my">
+                <input type="file" class="myFile" name="filename">
+                <input type="submit" class="myFile">
+            </div>
+        </div>
+        <div class="vid">
+            <h3>Video Links:</h3>
+            <textarea name="input" id="input" class="input"></textarea>
+        </div>
+        <div class="uploadfinal">
+            <button class="uploadbtn">Upload My Recipe</button>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Receipe Explorer</p>
+        </div>
+    </footer>
 
     <script>
         var buttonOne = document.getElementById("loginButton");
