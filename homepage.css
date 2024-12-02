@@ -160,13 +160,12 @@ header>h1{
     display: flex;
     gap: 5px;
 }
-
-.check-button>label>a:link, a:visited{
+.login-color:link, .login-color:visited{
     text-decoration: none;
     color: blue;
 }
 
-.check-button>label>a:hover{
+.login-color:hover{
     text-decoration: underline;
     color: orange;
 }
@@ -178,7 +177,7 @@ header>h1{
     padding-right: 30px;
 }
 
-.reset-password>label>a:link, a:visited{
+.reset-password>label>a:link, .reset-password>label>a:visited{
     text-decoration: none;
     color: blue;
 }
@@ -197,7 +196,7 @@ header>h1{
     padding-bottom: 5px;
 }
 
-.bottom>span>a:link, a:visited{
+.bottom>span>a:link, .bottom>span>a:visited{
     text-decoration: none;
     color: blue;
 }
