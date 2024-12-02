@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins'); 
-
+/* Styling for the Body and Header */
 body{
     margin: 0;
     padding: 0;
@@ -26,6 +26,7 @@ header>h1{
     font-size: 35px;
 }
 
+/* Styling for the login and registet buttons */
 .loginButton{
     width: 130px;
     height: 40px;
@@ -59,6 +60,7 @@ header>h1{
     background-color: black;
     color: aliceblue;
 }
+/* styling for the account form window */
 
 .account-form{
     position: fixed;
